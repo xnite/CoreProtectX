@@ -88,12 +88,12 @@ public class PluginInitializationService {
      *            The CoreProtect plugin instance
      */
     private static void registerCommands(JavaPlugin plugin) {
-        plugin.getCommand("coreprotect").setExecutor(CommandHandler.getInstance());
-        plugin.getCommand("coreprotect").setTabCompleter(new TabHandler());
-        plugin.getCommand("core").setExecutor(CommandHandler.getInstance());
-        plugin.getCommand("core").setTabCompleter(new TabHandler());
-        plugin.getCommand("co").setExecutor(CommandHandler.getInstance());
-        plugin.getCommand("co").setTabCompleter(new TabHandler());
+        plugin.getCommand("coreprotectx").setExecutor(CommandHandler.getInstance());
+        plugin.getCommand("coreprotectx").setTabCompleter(new TabHandler());
+        plugin.getCommand("corex").setExecutor(CommandHandler.getInstance());
+        plugin.getCommand("corex").setTabCompleter(new TabHandler());
+        plugin.getCommand("cox").setExecutor(CommandHandler.getInstance());
+        plugin.getCommand("cox").setTabCompleter(new TabHandler());
     }
 
     /**

@@ -1,33 +1,33 @@
-name: CoreProtect
+name: CoreProtectX
 main: net.coreprotect.CoreProtect
 version: ${project.version}
 branch: ${project.branch}
 api-version: 1.13
 folia-supported: true
-website: http://coreprotect.net
+website: https://www.BreakBlocks.com/CoreProtectX
 author: Intelli
 softdepend: [WorldEdit,AdvancedChests]
 description: >
              Provides block protection for your server.
 commands:
-  co:
+  cox:
     description: Utilize the plugin
-    permission: coreprotect.co
-    permission-message: §3CoreProtect §f- You do not have permission to do that.
+    permission: coreprotect.cox
+    permission-message: §3CoreProtectX §f- You do not have permission to do that.
     usage: /<command> <params>
-  core:
+  corex:
     description: Utilize the plugin
-    permission: coreprotect.core
-    permission-message: §3CoreProtect §f- You do not have permission to do that.
+    permission: coreprotect.corex
+    permission-message: §3CoreProtectX §f- You do not have permission to do that.
     usage: /<command> <params>
-  coreprotect:
+  coreprotectx:
     description: Utilize the plugin
-    permission: coreprotect.coreprotect
-    permission-message: §3CoreProtect §f- You do not have permission to do that.
+    permission: coreprotect.coreprotectx
+    permission-message: §3CoreProtectX §f- You do not have permission to do that.
     usage: /<command> <params>
 permissions:
     coreprotect.*:
-        description: Gives access to all CoreProtect actions and commands
+        description: Gives access to all CoreProtectX actions and commands
         default: op
         children: 
             coreprotect.rollback: true
@@ -53,14 +53,14 @@ permissions:
             coreprotect.status: true
             coreprotect.consumer: true
             coreprotect.networking: true
-    coreprotect.co:
-        description: Has permission to access the CoreProtect /co command
+    coreprotect.cox:
+        description: Has permission to access the CoreProtect /cox command
         default: true
-    coreprotect.core:
-        description: Has permission to access the CoreProtect /core command
+    coreprotect.corex:
+        description: Has permission to access the CoreProtect /corex command
         default: false
-    coreprotect.coreprotect:
-        description: Has permission to access the CoreProtect /coreprotect command
+    coreprotect.coreprotectx:
+        description: Has permission to access the CoreProtect /coreprotectx command
         default: false
     coreprotect.lookup:
         description: Has permission to use the lookup command

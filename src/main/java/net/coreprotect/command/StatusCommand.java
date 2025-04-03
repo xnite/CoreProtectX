@@ -24,7 +24,7 @@ public class StatusCommand {
 
     protected static void runCommand(CommandSender player, boolean permission, String[] args) {
         if (!permission) {
-            Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.NO_PERMISSION));
+            Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtectX " + Color.WHITE + "- " + Phrase.build(Phrase.NO_PERMISSION));
             return;
         }
 
@@ -43,7 +43,7 @@ public class StatusCommand {
                         }
                     }
 
-                    Chat.sendMessage(player, Color.WHITE + "----- " + Color.DARK_AQUA + "CoreProtect" + (VersionUtils.isCommunityEdition() ? " " + ConfigHandler.COMMUNITY_EDITION : "") + Color.WHITE + " -----");
+                    Chat.sendMessage(player, Color.WHITE + "----- " + Color.DARK_AQUA + "CoreProtectX" + (VersionUtils.isCommunityEdition() ? " " + ConfigHandler.COMMUNITY_EDITION : "") + Color.WHITE + " -----");
                     Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.STATUS_VERSION, Color.WHITE, ConfigHandler.EDITION_NAME + " v" + pdfFile.getVersion() + ".") + versionCheck);
 
                     String donationKey = NetworkHandler.donationKey();

@@ -1,4 +1,4 @@
-![CoreProtect](https://userfolio.com/uploads/coreprotect-banner-v19.png)
+![CoreProtectX](https://userfolio.com/uploads/coreprotect-banner-v19.png)
 
 [![Artistic License 2.0](https://img.shields.io/github/license/PlayPro/CoreProtect?&logo=github)](LICENSE)
 [![GitHub Workflows](https://github.com/PlayPro/CoreProtect/actions/workflows/build.yml/badge.svg)](https://github.com/PlayPro/CoreProtect/actions)
@@ -6,20 +6,20 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/playpro/coreprotect/badge)](https://www.codefactor.io/repository/github/playpro/coreprotect)
 [![Join us on Discord](https://img.shields.io/discord/348680641560313868.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/b4DZ4jy)
 
-CoreProtect
+CoreProtectX
 ===========
 
-CoreProtect is a blazing fast data logging and anti-griefing tool for Minecraft servers.
+CoreProtectX is a fork of CoreProtect, a blazing fast data logging and anti-griefing tool for Minecraft servers.
 
 For a detailed description of the plugin, please visit [coreprotect.net](https://coreprotect.net).
 
-| Quick Links |  |
-| --- | --- |
-| CoreProtect Discord: | [discord.gg/b4DZ4jy](https://discord.gg/b4DZ4jy) |
-| CoreProtect Patreon: | [patreon.com/coreprotect](https://www.patreon.com/coreprotect) |
-| CoreProtect Documentation: | [docs.coreprotect.net](https://docs.coreprotect.net) |
-| Downloads for MC 1.14 - 1.20: | [coreprotect.net/latest](https://coreprotect.net/latest/) |
-| Downloads for MC 1.8 - 1.12: | [coreprotect.net/legacy](https://coreprotect.net/legacy/) |
+| Quick Links                      |                                                                                          |
+|----------------------------------|------------------------------------------------------------------------------------------|
+| Get help on Discord:             | [discord.gg/3RUjaRzdKv](https://discord.gg/3RUjaRzdKv)                                   |
+| Support CoreProtectX on Patreon: | [patreon.com/BreakBlocks](https://www.patreon.com/BreakBlocks)                           |
+| CoreProtect Documentation:       | [docs.coreprotect.net](https://docs.coreprotect.net)                                     |
+| Downloads for MC 1.14 - 1.20:    | [github.com/xnite/CoreProtectX/releases](https://github.com/xnite/CoreProtectX/releases) |
+| Downloads for MC 1.8 - 1.12:     | Unavailable                                                                              |
 
 bStats
 ------
@@ -48,7 +48,7 @@ Maven
 
 Contributing
 ------
-CoreProtect is an open source project, and gladly accepts community contributions.
+CoreProtectX is an open source project, and gladly accepts community contributions.
 
 If you'd like to contribute, please read our contributing guidelines here: [CONTRIBUTING.md](CONTRIBUTING.md)
 
