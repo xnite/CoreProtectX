@@ -17,7 +17,7 @@ import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.consumer.Queue;
 import net.coreprotect.consumer.process.Process;
@@ -52,7 +52,7 @@ public class ContainerRollback extends Rollback {
             final String finalUserString = userString;
             ConfigHandler.rollbackHash.put(userString, new int[] { 0, 0, 0, 0, 0 });
 
-            Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), new Runnable() {
+            Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), new Runnable() {
                 @Override
                 public void run() {
                     try {

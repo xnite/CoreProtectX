@@ -3,10 +3,10 @@ package net.coreprotect.database.logger;
 import java.sql.PreparedStatement;
 import java.util.Locale;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.Bukkit;
 import org.bukkit.block.BlockState;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.database.statement.BlockStatement;
@@ -32,7 +32,7 @@ public class PlayerKillLogger {
 
             CoreProtectPreLogEvent event = new CoreProtectPreLogEvent(user);
             if (Config.getGlobal().API_ENABLED && !Bukkit.isPrimaryThread()) {
-                CoreProtect.getInstance().getServer().getPluginManager().callEvent(event);
+                CoreProtectX.getInstance().getServer().getPluginManager().callEvent(event);
             }
 
             if (event.isCancelled()) {

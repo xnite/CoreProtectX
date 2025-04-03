@@ -8,7 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.BlockState;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
@@ -87,7 +87,7 @@ public class BlockPlaceLogger {
 
             CoreProtectPreLogEvent event = new CoreProtectPreLogEvent(user);
             if (Config.getGlobal().API_ENABLED && !Bukkit.isPrimaryThread()) {
-                CoreProtect.getInstance().getServer().getPluginManager().callEvent(event);
+                CoreProtectX.getInstance().getServer().getPluginManager().callEvent(event);
             }
 
             int userId = UserStatement.getId(preparedStmt, event.getUser(), true);

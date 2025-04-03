@@ -16,7 +16,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.config.Config;
 import net.coreprotect.language.Phrase;
 import net.coreprotect.language.Selector;
@@ -91,7 +91,7 @@ public class PluginChannelHandshakeListener implements PluginMessageListener, Li
             getPluginChannelPlayers().add(player.getUniqueId());
             Chat.console(Phrase.build(Phrase.NETWORK_CONNECTION, player.getName(), modId, modVersion, Selector.FIRST));
 
-            player.sendPluginMessage(CoreProtect.getInstance(), pluginChannel, sendRegistered());
+            player.sendPluginMessage(CoreProtectX.getInstance(), pluginChannel, sendRegistered());
         }
         catch (Exception exception) {
             Chat.console(exception.toString());

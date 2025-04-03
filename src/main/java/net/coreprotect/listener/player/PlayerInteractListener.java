@@ -38,7 +38,7 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
@@ -78,7 +78,7 @@ public final class PlayerInteractListener extends Queue implements Listener {
         }
 
         if (!player.hasPermission("coreprotect.inspect")) {
-            Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.NO_PERMISSION));
+            Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtectX " + Color.WHITE + "- " + Phrase.build(Phrase.NO_PERMISSION));
             ConfigHandler.inspecting.put(player.getName(), false);
             return;
         }
@@ -296,7 +296,7 @@ public final class PlayerInteractListener extends Queue implements Listener {
                             boolean oldIsWaxed = BukkitAdapter.ADAPTER.isWaxed(sign);
 
                             if (!oldIsWaxed) {
-                                Scheduler.runTask(CoreProtect.getInstance(), () -> {
+                                Scheduler.runTask(CoreProtectX.getInstance(), () -> {
                                     BlockState newState = block.getState();
                                     if (newState instanceof Sign) {
                                         Sign newSign = (Sign) newState;
@@ -343,7 +343,7 @@ public final class PlayerInteractListener extends Queue implements Listener {
 
                             /*
                             BlockState blockState = block.getState();
-                            Bukkit.getServer().getScheduler().runTask(CoreProtect.getInstance(), () -> {
+                            Bukkit.getServer().getScheduler().runTask(CoreProtectX.getInstance(), () -> {
                                 try {
                                     BlockData validateBlockData = block.getBlockData();
                                     if (validateBlockData instanceof Lightable && !((Lightable) validateBlockData).isLit()) {
@@ -484,7 +484,7 @@ public final class PlayerInteractListener extends Queue implements Listener {
                         if (handItem.getType() == Material.BRUSH) {
                             BlockState blockState = block.getState();
                             Location blockLocation = block.getLocation();
-                            Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), () -> {
+                            Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), () -> {
                                 Material newType = block.getType();
                                 if (type == newType || (newType != Material.SAND && newType != Material.GRAVEL)) {
                                     return;
@@ -586,7 +586,7 @@ public final class PlayerInteractListener extends Queue implements Listener {
                         if (!exists) {
                             final Player playerFinal = player;
                             final Location locationFinal = crystalLocation;
-                            Scheduler.runTask(CoreProtect.getInstance(), () -> {
+                            Scheduler.runTask(CoreProtectX.getInstance(), () -> {
                                 try {
                                     boolean blockExists = false;
                                     int showingBottom = 0;

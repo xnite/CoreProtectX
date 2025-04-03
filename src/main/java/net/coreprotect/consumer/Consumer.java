@@ -11,7 +11,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.block.BlockState;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.consumer.process.Process;
 
@@ -142,7 +142,7 @@ public class Consumer extends Process implements Runnable, Thread.UncaughtExcept
     @Override
     public void uncaughtException(Thread thread, Throwable e) {
         e.printStackTrace();
-        Bukkit.getPluginManager().disablePlugin(CoreProtect.getInstance());
+        Bukkit.getPluginManager().disablePlugin(CoreProtectX.getInstance());
     }
 
     public static void startConsumer() {

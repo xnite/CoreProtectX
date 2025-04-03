@@ -34,7 +34,7 @@ public class ShutdownService {
      * Safely shuts down the plugin, ensuring all data is saved
      *
      * @param plugin
-     *            The CoreProtect plugin instance
+     *            The CoreProtectX plugin instance
      */
     public static void safeShutdown(Plugin plugin) {
         try {
@@ -68,7 +68,7 @@ public class ShutdownService {
             waitForPendingOperations(shutdownTime, nextAlertTime);
 
             ConfigHandler.performDisable();
-            Chat.console(Phrase.build(Phrase.DISABLE_SUCCESS, "CoreProtect v" + plugin.getDescription().getVersion()));
+            Chat.console(Phrase.build(Phrase.DISABLE_SUCCESS, "CoreProtectX v" + plugin.getDescription().getVersion()));
         }
         catch (Exception e) {
             e.printStackTrace();

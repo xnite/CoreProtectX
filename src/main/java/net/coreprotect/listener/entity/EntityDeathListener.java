@@ -69,7 +69,7 @@ import org.bukkit.projectiles.ProjectileSource;
 
 import com.google.common.collect.Lists;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.config.Config;
 import net.coreprotect.consumer.Queue;
@@ -104,7 +104,7 @@ public final class EntityDeathListener extends Queue implements Listener {
         }
 
         for (LivingEntity entity : entityList) {
-            Scheduler.runTask(CoreProtect.getInstance(), () -> {
+            Scheduler.runTask(CoreProtectX.getInstance(), () -> {
                 if (entity != null && entity.isDead()) {
                     logEntityDeath(entity, "#command");
                 }

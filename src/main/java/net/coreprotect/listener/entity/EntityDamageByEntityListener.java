@@ -2,6 +2,7 @@ package net.coreprotect.listener.entity;
 
 import java.util.Locale;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -28,7 +29,6 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.projectiles.ProjectileSource;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.consumer.Queue;
@@ -127,7 +127,7 @@ public final class EntityDamageByEntityListener extends Queue implements Listene
                         if (Config.getConfig(entityLocation.getWorld()).ITEM_TRANSACTIONS) {
                             String killer = user;
                             ItemStack[] contents = ItemUtils.getContainerContents(Material.ARMOR_STAND, entity, block.getLocation());
-                            Scheduler.runTask(CoreProtect.getInstance(), () -> {
+                            Scheduler.runTask(CoreProtectX.getInstance(), () -> {
                                 if (entity != null && entity.isDead()) {
                                     entityLocation.setY(entityLocation.getY() + 0.99);
                                     Database.containerBreakCheck(killer, Material.ARMOR_STAND, entity, contents, block.getLocation());

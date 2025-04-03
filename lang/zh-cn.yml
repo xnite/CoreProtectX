@@ -1,4 +1,4 @@
-# CoreProtect Language File (zh-CN)
+# CoreProtectX Language File (zh-CN)
 # Origin: Intelli, Translator: DreamVoid, StarWishsama, YuanYuanOwO
 
 ACTION_NOT_SUPPORTED: "该命令不支持该操作。"
@@ -134,7 +134,7 @@ NO_RESULTS_PAGE: "没有在指定页面找到{结果|数据}。"
 NO_ROLLBACK: "没有找到{等待的|上一个}回滚/恢复。"
 PATCH_INTERRUPTED: "升级已中断，将在服务器重新启动时重试。"
 PATCH_OUTDATED_1: "无法升级早于 {0} 的数据库。"
-PATCH_OUTDATED_2: "请升级到受支持的 CoreProtect 版本。"
+PATCH_OUTDATED_2: "请升级到受支持的 CoreProtectX 版本。"
 PATCH_PROCESSING: "正在处理新数据，请稍等..."
 PATCH_SKIP_UPDATE: "在 {0} 跳过{表|索引}的{更新|创建|删除}。"
 PATCH_STARTED: "正在准备更新到版本 {0}，请稍等..."

@@ -13,7 +13,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.thread.Scheduler;
@@ -51,7 +51,7 @@ public final class HopperPullListener {
 
     private static void startHopperProcessor() {
         if (activeProcessors.incrementAndGet() <= MAX_CONCURRENT_PROCESSORS) {
-            Scheduler.runTaskAsynchronously(CoreProtect.getInstance(), () -> {
+            Scheduler.runTaskAsynchronously(CoreProtectX.getInstance(), () -> {
                 try {
                     // Use the same server running check as Consumer class
                     while (!hopperQueue.isEmpty() && (ConfigHandler.serverRunning || ConfigHandler.converterRunning)) {

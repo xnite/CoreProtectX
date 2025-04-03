@@ -2,12 +2,12 @@ package net.coreprotect.services;
 
 import java.io.File;
 
+import net.coreprotect.CoreProtectX;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.command.CommandHandler;
 import net.coreprotect.command.TabHandler;
 import net.coreprotect.config.Config;
@@ -35,10 +35,10 @@ public class PluginInitializationService {
      * Initializes plugin components and configurations
      *
      * @param plugin
-     *            The CoreProtect plugin instance
+     *            The CoreProtectX plugin instance
      * @return true if initialization was successful, false otherwise
      */
-    public static boolean initializePlugin(CoreProtect plugin) {
+    public static boolean initializePlugin(CoreProtectX plugin) {
         // Load language phrases
         Language.loadPhrases();
 
@@ -85,7 +85,7 @@ public class PluginInitializationService {
      * Registers plugin commands
      *
      * @param plugin
-     *            The CoreProtect plugin instance
+     *            The CoreProtectX plugin instance
      */
     private static void registerCommands(JavaPlugin plugin) {
         plugin.getCommand("coreprotectx").setExecutor(CommandHandler.getInstance());
@@ -110,7 +110,7 @@ public class PluginInitializationService {
      * Displays startup messages in the console
      *
      * @param plugin
-     *            The CoreProtect plugin instance
+     *            The CoreProtectX plugin instance
      */
     private static void displayStartupMessages(JavaPlugin plugin) {
         PluginDescriptionFile pluginDescription = plugin.getDescription();
@@ -133,9 +133,9 @@ public class PluginInitializationService {
      * Starts background services
      *
      * @param plugin
-     *            The CoreProtect plugin instance
+     *            The CoreProtectX plugin instance
      */
-    private static void startBackgroundServices(CoreProtect plugin) {
+    private static void startBackgroundServices(CoreProtectX plugin) {
         // Start network handler
         Scheduler.scheduleSyncDelayedTask(plugin, () -> {
             try {
@@ -159,7 +159,7 @@ public class PluginInitializationService {
      * Enables metrics reporting
      *
      * @param plugin
-     *            The CoreProtect plugin instance
+     *            The CoreProtectX plugin instance
      */
     private static void enableMetrics(JavaPlugin plugin) {
         try {

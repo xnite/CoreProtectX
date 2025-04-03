@@ -13,7 +13,7 @@ import net.coreprotect.database.Database;
 import net.coreprotect.database.statement.UserStatement;
 
 /**
- * Provides API methods for looking up player session data in the CoreProtect database.
+ * Provides API methods for looking up player session data in the CoreProtectX database.
  * Session data includes login/logout events and their associated timestamps and locations.
  */
 public class SessionLookup {

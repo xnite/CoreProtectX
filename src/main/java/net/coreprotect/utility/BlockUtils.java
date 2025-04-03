@@ -20,7 +20,7 @@ import org.bukkit.inventory.BlockInventoryHolder;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.thread.Scheduler;
 
@@ -186,7 +186,7 @@ public class BlockUtils {
     }
 
     public static void updateBlock(final BlockState block) {
-        Scheduler.runTask(CoreProtect.getInstance(), () -> {
+        Scheduler.runTask(CoreProtectX.getInstance(), () -> {
             try {
                 if (block.getBlockData() instanceof Waterlogged) {
                     Block currentBlock = block.getBlock();

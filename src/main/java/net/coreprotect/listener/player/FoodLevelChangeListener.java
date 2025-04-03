@@ -11,7 +11,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.consumer.Queue;
 import net.coreprotect.thread.CacheHandler;
 import net.coreprotect.thread.Scheduler;
@@ -50,7 +50,7 @@ public final class FoodLevelChangeListener extends Queue implements Listener {
                     }
                     final Material oldBlockType = oldType;
 
-                    Scheduler.runTask(CoreProtect.getInstance(), () -> {
+                    Scheduler.runTask(CoreProtectX.getInstance(), () -> {
                         try {
                             Block newBlock = oldBlockState.getBlock();
                             BlockState newBlockState = newBlock.getState();

@@ -1,4 +1,4 @@
-# CoreProtect Language File (pl)
+# CoreProtectX Language File (pl)
 
 ACTION_NOT_SUPPORTED: "To działanie nie jest obsługiwane."
 AMOUNT_BLOCK: "{0} {blok|bloki}"
@@ -133,7 +133,7 @@ NO_RESULTS_PAGE: "Nie {wyniki|dane} znalezione dla tej strony."
 NO_ROLLBACK: "Nie {oczekujące|poprzednie} znaleziono wycofywanie/przywracanie."
 PATCH_INTERRUPTED: "Aktualizacja przerwana. Spróbuje ponownie po ponownym uruchomieniu."
 PATCH_OUTDATED_1: "Nie można zaktualizować baz danych starszych niż {0}."
-PATCH_OUTDATED_2: "Uaktualnij do obsługiwanej wersji CoreProtect."
+PATCH_OUTDATED_2: "Uaktualnij do obsługiwanej wersji CoreProtectX."
 PATCH_PROCESSING: "Przetwarzanie nowych danych. Proszę czekać..."
 PATCH_SKIP_UPDATE: "Skaczący {tabela|indeks} {aktualizacja|tworzenie|usuwanie} na {0}."
 PATCH_STARTED: "Działający {0} Aktualizacja. Proszę czekać..."

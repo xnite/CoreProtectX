@@ -1,8 +1,8 @@
 package net.coreprotect.listener;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.plugin.PluginManager;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.listener.block.BlockBreakListener;
 import net.coreprotect.listener.block.BlockBurnListener;
 import net.coreprotect.listener.block.BlockDispenseListener;
@@ -59,7 +59,7 @@ import net.coreprotect.paper.listener.PaperChatListener;
 
 public final class ListenerHandler {
 
-    public ListenerHandler(CoreProtect plugin) {
+    public ListenerHandler(CoreProtectX plugin) {
 
         PluginManager pluginManager = plugin.getServer().getPluginManager();
 
@@ -148,15 +148,15 @@ public final class ListenerHandler {
     }
 
     public static void registerNetworking() {
-        CoreProtect.getInstance().getServer().getMessenger().registerIncomingPluginChannel(CoreProtect.getInstance(), PluginChannelHandshakeListener.pluginChannel, new PluginChannelHandshakeListener());
-        CoreProtect.getInstance().getServer().getMessenger().registerOutgoingPluginChannel(CoreProtect.getInstance(), PluginChannelHandshakeListener.pluginChannel);
-        CoreProtect.getInstance().getServer().getMessenger().registerOutgoingPluginChannel(CoreProtect.getInstance(), PluginChannelListener.pluginChannel);
+        CoreProtectX.getInstance().getServer().getMessenger().registerIncomingPluginChannel(CoreProtectX.getInstance(), PluginChannelHandshakeListener.pluginChannel, new PluginChannelHandshakeListener());
+        CoreProtectX.getInstance().getServer().getMessenger().registerOutgoingPluginChannel(CoreProtectX.getInstance(), PluginChannelHandshakeListener.pluginChannel);
+        CoreProtectX.getInstance().getServer().getMessenger().registerOutgoingPluginChannel(CoreProtectX.getInstance(), PluginChannelListener.pluginChannel);
     }
 
     public static void unregisterNetworking() {
-        CoreProtect.getInstance().getServer().getMessenger().unregisterIncomingPluginChannel(CoreProtect.getInstance(), PluginChannelHandshakeListener.pluginChannel);
-        CoreProtect.getInstance().getServer().getMessenger().unregisterOutgoingPluginChannel(CoreProtect.getInstance(), PluginChannelHandshakeListener.pluginChannel);
-        CoreProtect.getInstance().getServer().getMessenger().unregisterOutgoingPluginChannel(CoreProtect.getInstance(), PluginChannelListener.pluginChannel);
+        CoreProtectX.getInstance().getServer().getMessenger().unregisterIncomingPluginChannel(CoreProtectX.getInstance(), PluginChannelHandshakeListener.pluginChannel);
+        CoreProtectX.getInstance().getServer().getMessenger().unregisterOutgoingPluginChannel(CoreProtectX.getInstance(), PluginChannelHandshakeListener.pluginChannel);
+        CoreProtectX.getInstance().getServer().getMessenger().unregisterOutgoingPluginChannel(CoreProtectX.getInstance(), PluginChannelListener.pluginChannel);
     }
 
 }

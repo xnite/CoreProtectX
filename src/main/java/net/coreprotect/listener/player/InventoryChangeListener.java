@@ -7,6 +7,7 @@ import java.util.Locale;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -26,7 +27,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.consumer.Queue;
@@ -105,7 +105,7 @@ public final class InventoryChangeListener extends Queue implements Listener {
                 else {
                     InventoryHolder inventoryHolder = inventory.getHolder();
                     if (inventoryHolder == null) {
-                        if (CoreProtect.getInstance().isAdvancedChestsEnabled()) {
+                        if (CoreProtectX.getInstance().isAdvancedChestsEnabled()) {
                             AdvancedChest<?, ?> advancedChest = AdvancedChestsAPI.getInventoryManager().getAdvancedChest(inventory);
                             if (advancedChest != null) {
                                 playerLocation = advancedChest.getLocation();
@@ -246,10 +246,10 @@ public final class InventoryChangeListener extends Queue implements Listener {
             return;
         }
 
-        if (location == null && !CoreProtect.getInstance().isAdvancedChestsEnabled()) {
+        if (location == null && !CoreProtectX.getInstance().isAdvancedChestsEnabled()) {
             return;
         }
-        if (CoreProtect.getInstance().isAdvancedChestsEnabled()) {
+        if (CoreProtectX.getInstance().isAdvancedChestsEnabled()) {
             AdvancedChest<?, ?> chest = AdvancedChestsAPI.getInventoryManager().getAdvancedChest(inventory);
             if (chest != null) {
                 location = chest.getLocation();
@@ -275,7 +275,7 @@ public final class InventoryChangeListener extends Queue implements Listener {
         inventoryProcessing.put(loggingChestId, true);
 
         final long taskStarted = InventoryChangeListener.tasksStarted.incrementAndGet();
-        Scheduler.runTaskAsynchronously(CoreProtect.getInstance(), () -> {
+        Scheduler.runTaskAsynchronously(CoreProtectX.getInstance(), () -> {
             try {
                 Material containerType = (enderChest != true ? null : Material.ENDER_CHEST);
                 InventoryChangeListener.checkTasks(taskStarted);
@@ -491,7 +491,7 @@ public final class InventoryChangeListener extends Queue implements Listener {
     }
 
     private boolean isAdvancedChest(Inventory inventory) {
-        return CoreProtect.getInstance().isAdvancedChestsEnabled() && AdvancedChestsAPI.getInventoryManager().getAdvancedChest(inventory) != null;
+        return CoreProtectX.getInstance().isAdvancedChestsEnabled() && AdvancedChestsAPI.getInventoryManager().getAdvancedChest(inventory) != null;
     }
 
 }

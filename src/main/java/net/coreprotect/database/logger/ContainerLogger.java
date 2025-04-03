@@ -15,7 +15,7 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.consumer.Queue;
@@ -225,7 +225,7 @@ public class ContainerLogger extends Queue {
 
                         CoreProtectPreLogEvent event = new CoreProtectPreLogEvent(user);
                         if (Config.getGlobal().API_ENABLED && !Bukkit.isPrimaryThread()) {
-                            CoreProtect.getInstance().getServer().getPluginManager().callEvent(event);
+                            CoreProtectX.getInstance().getServer().getPluginManager().callEvent(event);
                         }
 
                         if (event.isCancelled()) {

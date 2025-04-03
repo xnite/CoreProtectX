@@ -1,5 +1,6 @@
 package net.coreprotect.worldedit;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.Bukkit;
 
 import com.sk89q.worldedit.EditSession.Stage;
@@ -7,7 +8,6 @@ import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.event.extent.EditSessionEvent;
 import com.sk89q.worldedit.util.eventbus.Subscribe;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.language.Phrase;
 import net.coreprotect.language.Selector;
@@ -49,7 +49,7 @@ public class CoreProtectEditSessionEvent {
             // Failed to initialize WorldEdit logging
         }
 
-        Scheduler.runTask(CoreProtect.getInstance(), () -> {
+        Scheduler.runTask(CoreProtectX.getInstance(), () -> {
             try {
                 if (isInitialized()) {
                     Chat.console(Phrase.build(Phrase.INTEGRATION_SUCCESS, isFAWE() ? "FastAsyncWorldEdit" : "WorldEdit", Selector.FIRST));

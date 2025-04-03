@@ -11,30 +11,30 @@ import net.coreprotect.services.ShutdownService;
 import net.coreprotect.utility.Chat;
 
 /**
- * Main class for the CoreProtect plugin
+ * Main class for the CoreProtectX plugin
  */
-public final class CoreProtect extends JavaPlugin {
+public final class CoreProtectX extends JavaPlugin {
 
-    private static CoreProtect instance;
+    private static CoreProtectX instance;
     private boolean advancedChestsEnabled = false;
 
     /**
-     * Get the instance of CoreProtect
+     * Get the instance of CoreProtectX
      *
-     * @return This CoreProtect instance
+     * @return This CoreProtectX instance
      */
-    public static CoreProtect getInstance() {
+    public static CoreProtectX getInstance() {
         return instance;
     }
 
-    private final CoreProtectAPI api = new CoreProtectAPI();
+    private final CoreProtectXAPI api = new CoreProtectXAPI();
 
     /**
-     * Get the CoreProtect API
+     * Get the CoreProtectX API
      *
-     * @return The CoreProtect API
+     * @return The CoreProtectX API
      */
-    public CoreProtectAPI getAPI() {
+    public CoreProtectXAPI getAPI() {
         return api;
     }
 

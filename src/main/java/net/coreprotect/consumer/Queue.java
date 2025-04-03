@@ -3,6 +3,7 @@ package net.coreprotect.consumer;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -17,7 +18,6 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
@@ -87,7 +87,7 @@ public class Queue {
     }
 
     protected static void queueBlockBreakValidate(final String user, final Block block, final BlockState blockState, final Material type, final String blockData, final int extraData, int ticks) {
-        Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), () -> {
+        Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), () -> {
             try {
                 if (!block.getType().equals(type)) {
                     queueBlockBreak(user, blockState, type, blockData, null, extraData, 0);
@@ -180,7 +180,7 @@ public class Queue {
     }
 
     protected static void queueBlockPlaceDelayed(final String user, final Location placed, final Material type, final String blockData, final BlockState replaced, int ticks) {
-        Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), () -> {
+        Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), () -> {
             try {
                 queueBlockPlace(user, placed.getBlock().getState(), type, replaced, null, -1, 0, blockData);
             }
@@ -191,7 +191,7 @@ public class Queue {
     }
 
     protected static void queueBlockPlaceValidate(final String user, final BlockState blockLocation, final Block block, final BlockState blockReplaced, final Material forceT, final int forceD, final int forceData, final String blockData, int ticks) {
-        Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), () -> {
+        Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), () -> {
             try {
                 Material blockType = block.getType();
                 if (blockType.equals(forceT)) {
@@ -210,7 +210,7 @@ public class Queue {
     }
 
     protected static void queueBlockGravityValidate(final String user, final Location location, final Block block, final Material blockType, int ticks) {
-        Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), () -> {
+        Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), () -> {
             try {
                 Block placementBlock = BlockUtil.gravityScan(location, blockType, user);
                 if (!block.equals(placementBlock)) {

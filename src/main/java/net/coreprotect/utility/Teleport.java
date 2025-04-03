@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -12,13 +13,11 @@ import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Player;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.language.Phrase;
 import net.coreprotect.model.BlockGroup;
 import net.coreprotect.paper.PaperAdapter;
 import net.coreprotect.thread.Scheduler;
-import net.coreprotect.utility.BlockUtils;
 
 public class Teleport {
 
@@ -76,7 +75,7 @@ public class Teleport {
                                 }
                                 checkY++;
 
-                                Scheduler.scheduleSyncDelayedTask(CoreProtect.getInstance(), () -> {
+                                Scheduler.scheduleSyncDelayedTask(CoreProtectX.getInstance(), () -> {
                                     block1.setBlockData(revertBlockData);
                                     revertBlocks.remove(revertLocation);
                                 }, revertLocation, 1200);
@@ -110,14 +109,14 @@ public class Teleport {
                     if (!enforceTeleport) {
                         // Only send a message if the player was moved by at least 1 block
                         if (location.getY() >= (oldY + 1.00)) {
-                            Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.TELEPORTED_SAFETY));
+                            Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtectX " + Color.WHITE + "- " + Phrase.build(Phrase.TELEPORTED_SAFETY));
                         }
                     }
                     else {
-                        Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.TELEPORTED, "x" + playerX + "/y" + checkY + "/z" + playerZ + "/" + location.getWorld().getName()));
+                        Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtectX " + Color.WHITE + "- " + Phrase.build(Phrase.TELEPORTED, "x" + playerX + "/y" + checkY + "/z" + playerZ + "/" + location.getWorld().getName()));
                     }
                     if (alert) {
-                        Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtect " + Color.WHITE + Color.ITALIC + "- " + Phrase.build(Phrase.DIRT_BLOCK));
+                        Chat.sendMessage(player, Color.DARK_AQUA + "CoreProtectX " + Color.WHITE + Color.ITALIC + "- " + Phrase.build(Phrase.DIRT_BLOCK));
                     }
                 }
 

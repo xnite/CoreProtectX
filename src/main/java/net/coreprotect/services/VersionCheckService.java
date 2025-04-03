@@ -46,9 +46,9 @@ public class VersionCheckService {
 
             // Branch validation
             if (ConfigHandler.EDITION_BRANCH.length() == 0) {
-                Chat.sendConsoleMessage(Color.RED + "[CoreProtect] " + Phrase.build(Phrase.INVALID_BRANCH_1));
-                Chat.sendConsoleMessage(Color.GREY + "[CoreProtect] " + Phrase.build(Phrase.INVALID_BRANCH_2));
-                Chat.sendConsoleMessage(Color.GREY + "[CoreProtect] " + Phrase.build(Phrase.INVALID_BRANCH_3));
+                Chat.sendConsoleMessage(Color.RED + "[CoreProtectX] " + Phrase.build(Phrase.INVALID_BRANCH_1));
+                Chat.sendConsoleMessage(Color.GREY + "[CoreProtectX] " + Phrase.build(Phrase.INVALID_BRANCH_2));
+                Chat.sendConsoleMessage(Color.GREY + "[CoreProtectX] " + Phrase.build(Phrase.INVALID_BRANCH_3));
                 return false;
             }
 

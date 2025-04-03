@@ -57,7 +57,7 @@ import org.bukkit.inventory.MerchantRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.bukkit.BukkitAdapter;
 import net.coreprotect.database.rollback.Rollback;
 import net.coreprotect.thread.CacheHandler;
@@ -74,7 +74,7 @@ public class EntityUtil {
         if (type == null) {
             return;
         }
-        Scheduler.runTask(CoreProtect.getInstance(), () -> {
+        Scheduler.runTask(CoreProtectX.getInstance(), () -> {
             try {
                 Location location = block.getLocation();
                 location.setX(location.getX() + 0.50);

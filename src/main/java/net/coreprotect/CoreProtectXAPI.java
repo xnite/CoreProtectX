@@ -32,12 +32,12 @@ import net.coreprotect.utility.Chat;
 import net.coreprotect.utility.MaterialUtils;
 
 /**
- * The main API class for CoreProtect.
+ * The main API class for CoreProtectX.
  * <p>
- * This class provides methods for interacting with the CoreProtect database,
+ * This class provides methods for interacting with the CoreProtectX database,
  * including lookups, rollbacks, and logging operations.
  */
-public class CoreProtectAPI extends Queue {
+public class CoreProtectXAPI extends Queue {
 
     /**
      * Current version of the API
@@ -192,7 +192,7 @@ public class CoreProtectAPI extends Queue {
     }
 
     /**
-     * Checks if the CoreProtect API is enabled.
+     * Checks if the CoreProtectX API is enabled.
      * 
      * @return True if the API is enabled
      */

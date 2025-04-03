@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-import net.coreprotect.CoreProtect;
+import net.coreprotect.CoreProtectX;
 import net.coreprotect.config.Config;
 import net.coreprotect.language.Phrase;
 import net.coreprotect.language.Selector;
@@ -197,7 +197,7 @@ public class PluginChannelListener implements Listener {
                 break;
         }
 
-        commandSender.sendMessage(Color.DARK_AQUA + "CoreProtect " + Color.WHITE + "- " + Phrase.build(Phrase.NETWORK_TEST));
+        commandSender.sendMessage(Color.DARK_AQUA + "CoreProtectX " + Color.WHITE + "- " + Phrase.build(Phrase.NETWORK_TEST));
     }
 
     private void send(CommandSender commandSender, byte[] msgBytes) {
@@ -213,6 +213,6 @@ public class PluginChannelListener implements Listener {
             return;
         }
 
-        player.sendPluginMessage(CoreProtect.getInstance(), pluginChannel, data);
+        player.sendPluginMessage(CoreProtectX.getInstance(), pluginChannel, data);
     }
 }

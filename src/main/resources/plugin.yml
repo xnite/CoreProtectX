@@ -1,11 +1,11 @@
 name: CoreProtectX
-main: net.coreprotect.CoreProtect
+main: net.coreprotect.CoreProtectX
 version: ${project.version}
 branch: ${project.branch}
 api-version: 1.13
 folia-supported: true
 website: https://www.BreakBlocks.com/CoreProtectX
-author: Intelli
+author: SheepyMcGoat
 softdepend: [WorldEdit,AdvancedChests]
 description: >
              Provides block protection for your server.
@@ -54,13 +54,13 @@ permissions:
             coreprotect.consumer: true
             coreprotect.networking: true
     coreprotect.cox:
-        description: Has permission to access the CoreProtect /cox command
+        description: Has permission to access the CoreProtectX /cox command
         default: true
     coreprotect.corex:
-        description: Has permission to access the CoreProtect /corex command
+        description: Has permission to access the CoreProtectX /corex command
         default: false
     coreprotect.coreprotectx:
-        description: Has permission to access the CoreProtect /coreprotectx command
+        description: Has permission to access the CoreProtectX /coreprotectx command
         default: false
     coreprotect.lookup:
         description: Has permission to use the lookup command
