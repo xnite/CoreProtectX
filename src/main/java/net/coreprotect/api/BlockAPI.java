@@ -17,7 +17,7 @@ import net.coreprotect.utility.StringUtils;
 import net.coreprotect.utility.WorldUtils;
 
 /**
- * Provides API methods for block-related lookups in the CoreProtect database.
+ * Provides API methods for block-related lookups in the CoreProtectX database.
  */
 public class BlockAPI {
 

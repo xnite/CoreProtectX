@@ -2,11 +2,11 @@ package net.coreprotect.command;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+import net.coreprotect.CoreProtectX;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
 
-import net.coreprotect.CoreProtect;
 import net.coreprotect.config.Config;
 import net.coreprotect.config.ConfigHandler;
 import net.coreprotect.consumer.Consumer;
@@ -32,7 +32,7 @@ public class StatusCommand {
             @Override
             public void run() {
                 try {
-                    CoreProtect instance = CoreProtect.getInstance();
+                    CoreProtectX instance = CoreProtectX.getInstance();
                     PluginDescriptionFile pdfFile = instance.getDescription();
 
                     String versionCheck = "";
@@ -47,12 +47,14 @@ public class StatusCommand {
                     Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.STATUS_VERSION, Color.WHITE, ConfigHandler.EDITION_NAME + " v" + pdfFile.getVersion() + ".") + versionCheck);
 
                     String donationKey = NetworkHandler.donationKey();
+                    /*
                     if (donationKey != null) {
                         Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.STATUS_LICENSE, Color.WHITE, Phrase.build(Phrase.VALID_DONATION_KEY)) + " (" + donationKey + ")");
                     }
                     else {
                         Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.STATUS_LICENSE, Color.WHITE, Phrase.build(Phrase.INVALID_DONATION_KEY)) + Color.GREY + Color.ITALIC + " (" + Phrase.build(Phrase.CHECK_CONFIG) + ")");
                     }
+                    */
 
                     /*
                         Items processed (since server start)
@@ -141,8 +143,8 @@ public class StatusCommand {
                     // Functions.sendMessage(player, Color.DARK_AQUA + "Website: " + Color.WHITE + "www.coreprotect.net/updates/");
 
                     // Functions.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.LINK_DISCORD, Color.WHITE + "www.coreprotect.net/discord/").replaceFirst(":", ":" + Color.WHITE));
-                    Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.LINK_DISCORD, Color.WHITE, "www.coreprotect.net/discord/"));
-                    Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.LINK_PATREON, Color.WHITE, "www.patreon.com/coreprotect/"));
+                    Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.LINK_DISCORD, Color.WHITE, "discord.gg/3RUjaRzdKv"));
+                    Chat.sendMessage(player, Color.DARK_AQUA + Phrase.build(Phrase.LINK_PATREON, Color.WHITE, "www.patreon.com/BreakBlocks"));
 
                     if (player.isOp() && alert.get(player.getName()) == null) {
                         alert.put(player.getName(), true);
@@ -151,7 +153,7 @@ public class StatusCommand {
                             Thread.sleep(500);
                             /*
                             Functions.sendMessage(player, Color.WHITE + "----- " + Color.DARK_AQUA + "Recommended Plugin " + Color.WHITE + "-----");
-                            Functions.sendMessage(player, Color.DARK_AQUA + "Notice: " + Color.WHITE + "Enjoy CoreProtect? Check out CoreEdit!");
+                            Functions.sendMessage(player, Color.DARK_AQUA + "Notice: " + Color.WHITE + "Enjoy CoreProtectX? Check out CoreEdit!");
                             Functions.sendMessage(player, Color.DARK_AQUA + "Download: " + Color.WHITE + "www.coreedit.net/download/");
                             */
                         }

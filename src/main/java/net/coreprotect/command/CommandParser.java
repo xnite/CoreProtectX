@@ -17,7 +17,7 @@ import net.coreprotect.command.parser.UserParser;
 import net.coreprotect.command.parser.WorldParser;
 
 /**
- * Main parser class for CoreProtect commands.
+ * Main parser class for CoreProtectX commands.
  * Delegates to specialized parser classes for specific functionality.
  */
 public class CommandParser {

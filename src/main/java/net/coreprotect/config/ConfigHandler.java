@@ -44,19 +44,19 @@ public class ConfigHandler extends Queue {
     public static final int EDITION_VERSION = 2;
     public static final String EDITION_BRANCH = VersionUtils.getBranch();
     public static final String EDITION_NAME = VersionUtils.getPluginName();
-    public static final String COMMUNITY_EDITION = "Community Edition";
+    public static final String COMMUNITY_EDITION = "Potato Edition";
     public static final String JAVA_VERSION = "11.0";
     public static final String MINECRAFT_VERSION = "1.16";
     public static final String LATEST_VERSION = "1.21";
-    public static String path = "plugins/CoreProtect/";
+    public static String path = "plugins/CoreProtectX/";
     public static String sqlite = "database.db";
     public static String host = "127.0.0.1";
     public static int port = 3306;
     public static String database = "database";
     public static String username = "root";
     public static String password = "";
-    public static String prefix = "co_";
-    public static String prefixConfig = "co_";
+    public static String prefix = "cox_";
+    public static String prefixConfig = "cox_";
     public static int maximumPoolSize = 10;
 
     public static HikariDataSource hikariDataSource = null;
@@ -395,15 +395,15 @@ public class ConfigHandler extends Queue {
                     while (rs.next()) {
                         if (unixtimestamp < waitTime) {
                             if (!lockMessage) {
-                                Chat.sendConsoleMessage("[CoreProtect] " + Phrase.build(Phrase.DATABASE_LOCKED_1));
+                                Chat.sendConsoleMessage("[CoreProtectX] " + Phrase.build(Phrase.DATABASE_LOCKED_1));
                                 lockMessage = true;
                             }
                             Thread.sleep(1000);
                         }
                         else {
-                            Chat.sendConsoleMessage(Color.RED + "[CoreProtect] " + Phrase.build(Phrase.DATABASE_LOCKED_2));
-                            Chat.sendConsoleMessage(Color.GREY + "[CoreProtect] " + Phrase.build(Phrase.DATABASE_LOCKED_3));
-                            Chat.sendConsoleMessage(Color.GREY + "[CoreProtect] " + Phrase.build(Phrase.DATABASE_LOCKED_4));
+                            Chat.sendConsoleMessage(Color.RED + "[CoreProtectX] " + Phrase.build(Phrase.DATABASE_LOCKED_2));
+                            Chat.sendConsoleMessage(Color.GREY + "[CoreProtectX] " + Phrase.build(Phrase.DATABASE_LOCKED_3));
+                            Chat.sendConsoleMessage(Color.GREY + "[CoreProtectX] " + Phrase.build(Phrase.DATABASE_LOCKED_4));
                             return false;
                         }
 
