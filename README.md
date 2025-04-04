@@ -1,10 +1,5 @@
-![CoreProtectX](https://userfolio.com/uploads/coreprotect-banner-v19.png)
-
 [![Artistic License 2.0](https://img.shields.io/github/license/PlayPro/CoreProtect?&logo=github)](LICENSE)
-[![GitHub Workflows](https://github.com/PlayPro/CoreProtect/actions/workflows/build.yml/badge.svg)](https://github.com/PlayPro/CoreProtect/actions)
-[![Netlify Status](https://img.shields.io/netlify/c1d26a0f-65c5-4e4b-95d7-e08af671ab67)](https://app.netlify.com/sites/coreprotect/deploys)
-[![CodeFactor](https://www.codefactor.io/repository/github/playpro/coreprotect/badge)](https://www.codefactor.io/repository/github/playpro/coreprotect)
-[![Join us on Discord](https://img.shields.io/discord/348680641560313868.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/b4DZ4jy)
+[![Join us on Discord](https://img.shields.io/discord/1031554396468826182.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/3RUjaRzdKv)
 
 CoreProtectX
 ===========
@@ -17,24 +12,21 @@ For a detailed description of the plugin, please visit [coreprotect.net](https:/
 |----------------------------------|------------------------------------------------------------------------------------------|
 | Get help on Discord:             | [discord.gg/3RUjaRzdKv](https://discord.gg/3RUjaRzdKv)                                   |
 | Support CoreProtectX on Patreon: | [patreon.com/BreakBlocks](https://www.patreon.com/BreakBlocks)                           |
-| CoreProtect Documentation:       | [docs.coreprotect.net](https://docs.coreprotect.net)                                     |
+| CoreProtectX Documentation:      | [soon&trade;](#)                                                                |
 | Downloads for MC 1.14 - 1.20:    | [github.com/xnite/CoreProtectX/releases](https://github.com/xnite/CoreProtectX/releases) |
 | Downloads for MC 1.8 - 1.12:     | Unavailable                                                                              |
 
-bStats
-------
-[![bStats Graph Data](https://bstats.org/signatures/bukkit/CoreProtect.svg)](https://bstats.org/plugin/bukkit/CoreProtect)
 
 API
 ------
-### [API Documentation](https://docs.coreprotect.net/api/)
+### [API Documentation](#) Coming soon&trade;
 
 ### Dependency Information
 Maven
 ```xml
 <repository>
-    <id>playpro-repo</id>
-    <url>https://maven.playpro.com</url>
+    <id>soon&trade;</id>
+    <url>soon&trade;</url>
 </repository>
 ```
 ```xml
